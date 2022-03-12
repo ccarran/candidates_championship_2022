@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: url('../images/background.jpg');
+    background-attachment: fixed;
+}
+
+body {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+}
+
+header {
+    border-bottom: 1px solid black;
+}
+header h1 {
+    padding: 0.5em 0;
+    font-size: 250%;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+header img {
+    width: 140px;
+    height: 105px;
+    float: left;
+    margin: .5em 2em;
+}
+
+/* Horizontal flexbox navigation menu */
+#nav_menu {
+    position: sticky;
+    top: 0;
+}
+.container {
+    display: flex;
+    list-style: none;
+    background-color: black;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+.container li {
+    flex: 1;
+}
+.container li a {
+    display: block;
+    padding: .75em 1em;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    transition: all .5s;
+}
+.container li a:hover {
+    color: #E8B56B;
+}
+.container ul {
+    display: none;
+    width: 20%;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    box-shadow: 7px 7px 15px -1px gray;
+}
+.container ul li {
+    flex-direction: column;
+}
+.container ul li a {
+    text-align: left;
+    padding-left: 1em;
+}
+.container li:hover > ul {
+    display: block;
+}
+
+/* Main section */
+section {
+    clear: both;
+    font-size: 120%;
+    padding: 2% 3em 25%;
+}
+section h1 {
+    margin: 0;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+}
+article > img {
+    margin: 1em 2em;
+    max-width: 200px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer section */
+footer p{
+    text-align: center;
+    padding: 1% 0;
+}
